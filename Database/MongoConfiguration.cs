@@ -8,7 +8,8 @@ namespace PetShop.Database
         public IMongoCollection<UsersModel> _usersCollection;
         public MongoConfiguration()
         {
-            var client = new MongoClient("mongodb+srv://LucasGabriel:ilB1CXQuMfjL072t@petshop.sg87o.mongodb.net/?retryWrites=true&w=majority&appName=PetShop");
+            //Pedir a string de conexão a Lucas
+            var client = new MongoClient("");
             var database = client.GetDatabase("PetShop"); 
             _usersCollection = database.GetCollection<UsersModel>("Users"); 
         }
